@@ -1,13 +1,14 @@
 pipeline {
   environment {
     imageName = 'yoonkangho/hello'
-    containerName = 'hello'˚
+    containerName = 'hello'
     credentialId = 'docker-hub'
   }
   agent {
     label 'hello'
   }
   stages {
+
     stage('Build Jar') {
       steps {
         tool 'jdk-11'
